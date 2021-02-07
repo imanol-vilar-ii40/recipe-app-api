@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     'corex',
     'user',
+    'recipe',
 ]
 
 MIDDLEWARE = [
