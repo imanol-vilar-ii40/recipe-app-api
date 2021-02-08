@@ -133,5 +133,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'  # 12.0.0.1:8000/media/ -> url to media
+
+MEDIA_ROOT = '/vol/web/media'  # where to store all media
+STATIC_ROUTE = '/vol/web/static'  # where to store all static files
 
 AUTH_USER_MODEL = 'corex.User'
