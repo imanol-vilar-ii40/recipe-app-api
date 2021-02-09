@@ -18,10 +18,21 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 
+from rest_framework_swagger.views import get_swagger_view
+# from rest_framework.schemas import get_schema_view
+
+schema_view = get_swagger_view(title='API Swagger')
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/user/', include('user.urls')),
-    path('api/recipe/', include('recipe.urls'))
+    path('api/recipe/', include('recipe.urls')),
+    path('', schema_view)
+    # path('schema/', get_schema_view(
+    #     title="API Test",
+    #     description="API Test from Udemy Course",
+    #     version="1.0.0"
+    # ), name='openapi-schema')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 """ static() It makes the media URL available in a development server so we

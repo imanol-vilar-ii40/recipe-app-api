@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'rest_framework.authtoken',
+    'rest_framework_swagger',
 
     'corex',
     'user',
@@ -139,3 +140,8 @@ MEDIA_ROOT = '/vol/web/media'  # where to store all media
 STATIC_ROUTE = '/vol/web/static'  # where to store all static files
 
 AUTH_USER_MODEL = 'corex.User'
+
+# Swagger API
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
+}
