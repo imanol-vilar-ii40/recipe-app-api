@@ -4,7 +4,8 @@ psycopg2>=2.7.5,<2.8.0
 Pillow>=6.2.0,<6.2.2
 
 # Tool that is used to run Python applications in production
-uWSGI>=2.0.18,<2.1
+# uWSGI>=2.0.18,<2.1
+gunicorn==20.0.4
 
 # OpenAPI
 django-rest-swagger>=2.2.0,<2.3.0
